@@ -1,0 +1,1 @@
+document.body.innerHTML = Math.round((Math.random() * 110))
