@@ -1,5 +1,11 @@
-const stupneF = Number(prompt("Zadejte pozadovanou teplotu ve stupnich Fahrenheita: "))
+document.body.innerHTML = "<h2>FIT ČVUT</h2>"
+const krestniJmeno = prompt("Zadejte své křestní jméno (bez diakritiky): ")
+const prijmeni = prompt("Zadejte své příjmení (bez diakritiky): ")
+const domena = "@fit.cvut.cz"
 
-const stupneC = Number(5 * (stupneF - 32) / 9)
+const mailovaAdresa = prijmeni.trim().slice(0, 5) + krestniJmeno.trim().slice(0, 3) + domena
 
-document.body.innerHTML = Math.round(stupneC) + " °C"
+document.body.innerHTML += `
+  <p>Vaše emailová adresa je: </p>
+  <p><u>${mailovaAdresa.toLowerCase()}</u></p>
+`
